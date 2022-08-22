@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:eu-west-2:860061945305:task-definition/888336-HappyReturnsTask:1"
+        LoadBalancerInfo:
+          ContainerName: "auth"
+          ContainerPort: "9000"
+        PlatformVersion: "LATEST"
